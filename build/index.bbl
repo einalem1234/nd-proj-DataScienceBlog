@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{LinkedIn}
+S.~Savage, ``Data science and test driven development.''
+  \url{https://www.linkedin.com/pulse/data-science-test-driven-development-sam-savage/},
+  August 2015.
+\newblock Accessed on 2019-02-21.
+
+\bibitem{CCD:Grades}
+R.~Westphal and S.~Lieser, ``Clean code developer.''
+  \url{https://clean-code-developer.com/grades/}, 2015.
+\newblock Accessed on 2019-02-21.
+
+\bibitem{CCD}
+R.~Westphal and S.~Lieser, ``Clean code developer.''
+  \url{https://clean-code-developer.com/}, 2015.
+\newblock Accessed on 2019-02-14.
+
+\bibitem{CodingDojo}
+C.~C.~D. School, ``Coding dojo - clean code developer school.''
+  \url{https://ccd-school.de/coding-dojo/}, 2018.
+\newblock Accessed on 2019-02-14.
+
+\end{thebibliography}

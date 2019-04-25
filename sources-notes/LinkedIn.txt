@@ -1,0 +1,16 @@
+ https://www.linkedin.com/pulse/data-science-test-driven-development-sam-savage/
+ 
+ 
+ \begin{quote}
+ If Data Science really is a "science", then testing should be at the top of our agenda, and automating such testing is just common sense.
+ \end{quote}
+ 
+ (C) This work is exploratory, I don't know if I'll need this method in future, I might ditch it
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

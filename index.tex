@@ -1,0 +1,132 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{url}
+\usepackage{titling} % adding a image to the header
+
+\usepackage[scale=0.8]{geometry} % Reduce document margins
+\usepackage{graphicx}  % include grafi
+\usepackage{ragged2e}
+ 
+\title{}
+\author{Melanie Remmels}
+\date{ }
+
+\pretitle{%
+\begin{center}
+\begin{huge}
+Which Grade Does Your Data Science Code Get?
+\end{huge}
+\end{center}
+ \begin{minipage}[t]{0.7\textwidth}
+ written by \theauthor \newline
+ last edited \today
+}
+\posttitle{ 
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+    
+\includegraphics[width=6cm,height=2cm]{images/guertelfarben}\\[\bigskipamount]
+\end{minipage}}
+ 
+\begin{document}
+%%% TITLE
+\begin{center}
+  \begin{huge}
+    Which Grade Does Your Data Science Code Get?
+  \end{huge}
+\end{center}
+\begin{minipage}[t]{0.7\textwidth}
+  \begin{flushright}
+    written by \theauthor \\
+    last edited \today
+  \end{flushright}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+  \mbox{}\\
+  \includegraphics[width=6cm,height=2cm]{images/guertelfarben}\\[\bigskipamount]
+\end{minipage}
+
+%%% OUTLINE
+\begin{center}
+  \begin{justify}
+    \textbf{TODO}
+  \end{justify}
+\end{center}
+
+%%% CONTENT
+%% Introduction
+Data science is already a complex topic from the ground up. How can this topic be programmatically implemented so that it does not require rocket science to understand its implementation? Maybe a similar topic could help answering this question: 
+
+%Is it possible to analyse the quality of program code for comprehensibility and not only for programming style and indentation?
+
+
+\begin{itemize}
+  \item Are Data Scientists Software Developers? - Yes
+  \item Do Data Scientist write code? - Yes
+  \item Is Data Science Code easy to understand? - Sometimes
+  \item Do approaches and tools exist to improve "classic" software code? - Yes
+  \item Can the approaches for clean code be transferred to Data Science? - Let's see!
+\end{itemize}
+
+
+%% Part 1
+\section*{\textbf{Clean Code Developer}}
+If you want to (re)use the code of another developer, you have to understand it. You hope that the other developer has structured his code well, that variables have unique and meaningful names, and that there are some comments which explain the purpose of the whole algorithm.
+
+In other words, it is hoped that the developer has followed basic, unofficial programming rules. These rules are even more important when it comes to data science and machine learning. 
+
+The Clean Code Initiative \cite{CCD} is about promoting more professional software development. In my opinion, this initiative should also be applied to machine learning, as it increases the comprehensibility of code and programming. 
+Comprehensible code not only helps others, but also oneself, because it helps you to understand your own ideas expeditiously after a certain period of time.
+
+
+%% Part 2
+\section*{\textbf{Available Grades}}
+There are thousands of different programming paradigms and principles. The Clean Code initiative \cite{CCD} has divided these into different ranks. In the following you get a little insight into each grade:
+TODO: Jeden einzelnen Gürtel beschreiben
+
+\begin{description}
+\item[Grade 0 - Black:] You are interested in the topic, but you don't yet apply it in your everyday work
+\item[Grade 1 - Red:] The absolute essentials. You should build a general attitude to write clean code. Easy principles like DRY (Don't repeat yourself!) and KISS (Keep it simple, stupid!) are applied. The basic rule behind it is: Leave the code cleaner than you found it.
+\item[Grade 2 - Orange:] 
+\item[Grade 3 - Yellow:]
+\item[Grade 4 - Green:]
+\item[Grade 5 - Blue:]
+\item[Grade 6 - White:]
+\end{description}
+As mentioned on \cite{CCD:Grades}:  \begin{quote}
+Clean Code Developer is not a status but a progression.
+\end{quote}
+The idea is to internalize the values, not to learn the rules by heart. For this reason, someone who reached all grades should start again from the beginning.
+
+- Gürtel bauen aufeinander auf
+- Man sollte Gürtel nicht als Prüfung sehen, sondern versuchen sich immer weiter zu verbessern
+
+- Zitat: "Wer einen weißen Gürtel hat, soll wieder von vorne anfangen
+
+%% Part 3
+\section*{\textbf{Wie kann man es trainieren}}
+Katas
+Lesen wie andere vorgehen
+
+
+%% Conclusion
+Kann man noch weitere Sachen von der Software entwicklung übernehmen, die das Leben eines Data Scientist leichter machen?
+- Natürlich:
+- Versionierung
+- Code Review
+
+%TODO - Bild
+\includegraphics[width=0.7\textwidth]{images/ccdDesktop1200x800.jpg}
+\cite{LinkedIn}
+\cite{CCD:Grades}
+
+\cite{CCD}
+For further information and training how to programm clean, have a look here: \cite{CodingDojo}. The examples are for "normal" code, not data science specific. But for a first hands-on they are helpful.
+ 
+%%% REFERENCES 
+\bibliography{sources} 
+\bibliographystyle{ieeetr}
+ 
+\end{document}
+

@@ -1,0 +1,33 @@
+https://clean-code-developer.com/
+
+
+How to be a professional software developper?
+- does not need to earn money for the job
+- actively interested into his or her profession. This means reflecting on his or her product, way of working, materials and tools
+- is not simply satisfied if the boss or customer is satisfied
+- has an inner value system, double-checks his results and actions
+
+--> quality standards as a lowest common factor are required
+
+\begin{quote}
+It is all about the essence below: Code as structured expression of functionality. Considering code being the lowest common factor any software developer Clean Code describes a whole bunch of principles and best practices.
+\end{quote}
+
+\section{Values}
+\subsection{Evolvability}
+Software Maintenance does not exist -> You cannot do anything proactively to improve the software state.
+To enable changes software needs structure that embraces changes. This we call Evolvability. Normally software will be operated long periods. During these periods parameters change and features are added. Ideally cost of feature implementation will be independent from the point in time when the feature is introduced.--> Not like this in the real world
+\subsection{Correctness}
+Also non-functional requirements have to be fulfilled. The application shall save resources (memory, CPU-time, disk space, etc.) and response times shall be within a threshold. Only with all requirements fulfilled a software can be called correct.
+
+It is not sufficient to pass software though a test department to detect errors. Correctness must be considered during development. Developers have to face up to correctness. And to be able they need to understand the requirements. The developer’s duty is to ask when confronted with unclear requirement rather that peeping into a crystal ball.
+\subsection{Production Efficiency}
+Naturally finally development time and the software’s price are important. And that is higher if the production is not done efficiently. 
+Ultimately production efficiency means that software can be further developed over years or even decades instead of having to start over again. At the same time high production efficiency reduces the susceptibility to errors.
+\subsection{Principles and Practices}
+\subsubsection{Principles}
+CCD principles are fundamental software structuring approaches. They are either orthogonal to other parameters or build upon them. Code should be in line with as many principles as possible.
+While ignoring a principle doesn’t have an immediate negative effect, over time it will lead to pain. This pain may be difficulties to understand code, high effort to introduce changes or ultimately a no longer evolvable software.
+
+\subsubsection{Practices}
+Practices are permanently used techniques and methods. The practices mantra is “Do it like this. Every day. Always.”.
