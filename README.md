@@ -5,9 +5,9 @@ My Content for the Udacity Project Data Science Blog Post as part of the Nanodeg
 <!-- first line needs to stay here, otherwise the table is not rendered! -->
 |  |  | 
 | ------------- | ------------- |
-| **Description** | < What has been done in this project? >|
-| **Anaconda environment** | < Which environment was used? > |
-| **Data Set** | < Which data has been used? >|
+| **Description** | A freely selectable data set can be used for this project. The aim is to package the processing of the data in an easily understandable, readable report.|
+| **Report** | [Blog](report/report.md) |
+| **Data Set** | The chosen data set for this project is provided by Stackoverflow. It contains the results of a user servey performed in 2017.|
 
 ## Getting Started With This Code
 < What is the first file to be executed? >
@@ -23,10 +23,10 @@ If a folder is not used, use strike the folder name by using two tildes before a
 ├── LICENSE
 ├── README.md  
 ├── data
-├── models 
+├── ~~models~~
 ├── notebooks 
-├── report         <- Report of the results, written with Latex 
-├── src            
+├── report 
+├── ~~src~~            
 └── ~~tests~~
 ```
 
