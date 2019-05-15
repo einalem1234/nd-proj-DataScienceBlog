@@ -1,8 +1,10 @@
-# Short analysis of the Stackoverflow Survey 2017
-> TL;DR: Have a look at the last table at the bottom to get the answers for the following three questions: 
-> - Exists a correlation between *Overpaid* and the programming experience?
-> - Is there a programing language specific correlation between "OtherPeoplesCode - Maintaining other people's code is a form of torture" and "EnjoyDebugging -I enjoy debugging code"?
-> - How many people, who program in Python, follow the PEP8 guidelines and use spaces instead of tabs?
+# Do Stackoverflow users follow PEP 8? and other questions 
+![Image](TitelImage.jpg)
+>TL;DR: Have a look at the last table at the bottom to get the answers for the following three questions based on the anual Stackoverflow Survey of 2017:
+>- Exists a correlation between *Overpaid* and the programming experience?
+>- Is there a programing language specific correlation between “OtherPeoplesCode - Maintaining other people’s code is a form of torture” and “EnjoyDebugging -I enjoy debugging code”?
+>- How many people, who program in Python, follow the PEP8 guidelines and use spaces instead of tabs?
+
 
 Stackoverflow performs an anual survey. As it is used by many developers, it is "the largest and most comprehensive survey of people who code around the world" [Ref](https://insights.stackoverflow.com/survey/). 
 The survey covers a wide range of topics. From the technologies used to production blockers to working conditions, everything is covered.
@@ -25,18 +27,7 @@ The survey contained 154 questions. In total, there are 19102 survey responses. 
 ### Preprocessing
 To determine a correlation, you need values in the corresponding columns. Therefore, in the first step, all data records were removed where the entry in *Overpaid* was missing. By this step, the number of responses reduced from *19102* to *5184*.
 
-*YearsProgram* is a categorical value, which define a time spans of one year each. These values are converted into a nested dictionary which match the years of experience with the Overpaid rate as it can be seen below. 
- ``` Python
-## YEARS PROGRAM
-# Create a nested dictionary which matches the years of experience with the overpaid rate
-q1_dict_experience = defaultdict(dict)
-
-for key, data in df_q1.groupby(by=['YearsProgram', 'Overpaid']):
-    experience = key[0]
-    overpaid_target = key[1]
-    value = data.YearsProgram.count()
-    q1_dict_experience[experience][overpaid_target] = value
- ```
+*YearsProgram* is a categorical value, which define a time spans of one year each. These values are converted into a nested dictionary which match the years of experience with the Overpaid rate as it can be seen [here](https://github.com/einalem1234/nd-proj-DataScienceBlog/blob/master/notebooks/Stackoverflow_Survey_2017.ipynb)below. 
 
 ### Analysis
 To get comparable values for each time span, the values are calculated as percentage.
@@ -47,16 +38,10 @@ As it can be seen in the following figure, no correlation exists between the fee
 
 ## Question 2: Is there a programing language specific correlation between *OtherPeoplesCode - Maintaining other people's code is a form of torture* and *EnjoyDebugging -I enjoy debugging code*?
 ### Preprocessing
-In the stackoverflow data set exists a column *HaveWorkedLanguage* which contains a list of the different programming languages a respondent has been working with already. This list has been split into binary columns for each programming language. This preprocessing step can be found [here](../notebooks/Stackoverflow_Survey_2017.ipynb#Clean)
+In the stackoverflow data set exists a column *HaveWorkedLanguage* which contains a list of the different programming languages a respondent has been working with already. This list has been split into binary columns for each programming language. This preprocessing step can be found [here](https://github.com/einalem1234/nd-proj-DataScienceBlog/blob/master/notebooks/Stackoverflow_Survey_2017.ipynb#Clean)
 
-Both of the other columns *OtherPeopleCode* and *EnjoyDebugging* are categorial and preprocessed by one-hot-encoding, as shown below.
+Both of the other columns *OtherPeopleCode* and *EnjoyDebugging* are categorial and preprocessed by one-hot-encoding.
 
-``` Python
-# ENJOY DEBUGGING
-tmp = pd.get_dummies(df_q2.EnjoyDebugging, prefix='EnjoyDebugging', prefix_sep='_')
-df_q2[tmp.columns] = tmp
-df_q2 = df_q2.drop(labels=['EnjoyDebugging'], axis = 1)
-```
 ### Modelling
 My assumption is that someone who likes to debug and fix code, might also be interessted in understanding other peoples code as he does it often when searching for solutions. To test my assumption, I generated a correlation matrix between the two columns.
 
@@ -75,7 +60,7 @@ For some programming languages, there are some small identications agreeing or d
 ### Preprocessing
 As I write most of the time in Python, I was curious how many of the users use Spaces for indentation as it is proposed in the PEP8 guidelines.
 
-For this analysis, only two columns are needed: *Python* and *TabsSpaces*. The column *Python* has been generated as described in the preprocessing of Question 2. The corresponding code can be found [here](../notebooks/Stackoverflow_Survey_2017.ipynb#Clean). The column *TabsSpaces* has been converted into three binary columns, one for Tabs, one for Spaces and one for users who use both.
+For this analysis, only two columns are needed: *Python* and *TabsSpaces*. The column *Python* has been generated as described in the preprocessing of Question 2. The corresponding code can be found [here](https://github.com/einalem1234/nd-proj-DataScienceBlog/blob/master/notebooks/Stackoverflow_Survey_2017.ipynb#Clean). The column *TabsSpaces* has been converted into three binary columns, one for Tabs, one for Spaces and one for users who use both.
 ### Analysis
 For the analysis, some calculations have been made. Here are the results: 
 - 2119 Stackoverflow users who programm in Python use Spaces, as it is suggested by the PEP8 guidelines. This are 50.46% of all python users in this survey.
@@ -90,4 +75,4 @@ Three questions about the stackoverflow survey of 2017 have been answered in thi
 |2| Is there a programing language specific correlation between "OtherPeoplesCode - Maintaining other people's code is a form of torture" and "EnjoyDebugging -I enjoy debugging code"? | No clear correlation could be found between *OtherPeoplesCode* and *EnjoyDebugging*. There are language specific changes, but nothing extraordinary. |
 |3|How many people, who program in Python, follow the PEP8 guidelines and use spaces instead of tabs?| 50.46 % of all python users in this survey use spaces as it is suggested by the PEP8 pipelines.|
 
-The code of this analysis can be found [here](../notebooks/Stackoverflow_Survey_2017.ipynb).
+The code of this analysis can be found [here](https://github.com/einalem1234/nd-proj-DataScienceBlog/blob/master/notebooks/Stackoverflow_Survey_2017.ipynb).
